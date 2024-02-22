@@ -1,0 +1,14 @@
+/* grouped selector, will style all h1s and ps (comma makes it grouped) */
+h1, p {color: green; /* only css, no html -- no style tags */
+    font-size: .8em; /* could also type percentage */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* p {color: plum;} 
+basic element selector, eveery p on the page gets styled */
+
+p a {color: darkred;} /* descendant selector, will only style link in paragraph tag */
+
+/* id selector starts with # - uniquely identifies something on page, class starts with . - can have multiple */
+
+#secondparagraph {color:blue;}
+.purpletext {color: purple;}
