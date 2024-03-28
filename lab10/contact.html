@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .row1, .row2 {display: flex; border-radius: 1em; margin: 20px;}
+        .row1 {background-color: #fce090;}
+        .row2 {background-color: #4ac2b6;}
+        .address, .email, .form, .map {padding: 15px;}
+        .form {flex: 10;}
+        .map {flex: 4;}
+        .formq1, .formq2, .formq3 {color: #00232f;}
+        h1 {margin: 20px; color: #ffffff}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Contact</h1>
+    
+    <div class="row1">
+        <div class="address">Megan Radakovich<br> 
+            Watson Hall<br>
+            Syracuse, NY 13244</div>
+        <div class="email"><a href="mailto:mgradako@syr.edu">Email Megan</a><br></div>
+    </div>
+    <div class="row2">
+        <div class="form">
+            <form action="https://formspree.io/f/mzbnewyv" method="post">
+            <label for="name" class="formq1">Name:</label><br>
+            <input type="text" id="name" name="name">
+            
+            <p class="formq2">How would you like me to get back to you?</p>
+            <input type="checkbox" id="contact1" name="contact1" value="Email">
+            <label for="contact1">Email</label><br>
+            <input type="checkbox" id="contact2" name="contact2" value="Phone">
+            <label for="contact2">Phone</label><br>
+            <input type="checkbox" id="contact3" name="contact3" value="Text">
+            <label for="contact3">Text</label><br><br>
+    
+            <label for="question" class="formq3">Questions for me</label><br>
+            <textarea id="question" name="question" rows="3" cols="60"></textarea><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11664.345936887037!2d-76.14131678133639!3d43.03961182323692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f375491972e3%3A0xa6a83325164896cb!2sWatson%20Hall!5e0!3m2!1sen!2sus!4v1706804986100!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+</html>
