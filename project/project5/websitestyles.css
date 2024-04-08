@@ -1,0 +1,42 @@
+nav a {
+    color: #ffffff;
+}
+
+.pages {
+    float: right;
+    padding: 30px;
+}
+
+nav {
+    background-color: #0c1248;
+}
+
+header img {
+    max-width: 100%;
+    margin-right: 60%;
+}
+
+form {
+    background-color: #8eb1d3;
+    padding: 30px;
+    margin-right: 60%;
+}
+label {
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    background-color: #0c1248;
+    color: #ffffff;
+    }
+.address, .email, .phone, .map {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    color: #ffffff;
+    }
+
+@media only screen and (max-width: 800px) {
+    .map {display: none;}
+}
