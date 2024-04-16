@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y</title>
+    <style>
+        .skip {
+            background-color: #6565c6;
+            padding: 10px;
+            border: 2px solid #000000;
+            text-decoration: none;
+            position: absolute; /* positions relative to top and bottom of viewport */
+            top: 10px;
+            left: -999px; /* push button off of screen */
+        }
+        .skip:focus { /* when button is tabbed to = focus */
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- don't forget bookmark link in skip to content! (href linked to id tag) -->
+        <a href="#skip" class="skip" tabindex="1">Skip to Content</a><br>
+        <!-- tabindex is for complex website to change tab order -->
+        <a href="https://www.amazon.com" tabindex="4">Amazon</a><br>
+        <a href="https://www.google.com" tabindex="3">Google</a><br>
+        <a href="https://www.apple.com" tabindex="2">Apple</a>
+    </nav>
+
+    <h1>All the Accessibility Techniques</h1>
+    <p id="skip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam debitis temporibus assumenda praesentium provident nisi voluptate, suscipit cupiditate unde blanditiis omnis ducimus sint perspiciatis. Repellendus hic aliquam accusantium a quia?</p>
+</body>
+</html>
