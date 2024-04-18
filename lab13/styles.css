@@ -2,7 +2,7 @@ body {background-color: #32a89c;}
 p {color: #00232f;}
 h1 {color: #00232f;}
 nav {background-color: #00232f; padding: 10px; margin-bottom: 30px;}
-nav a:hover {background-color: #fbba6a;}
+nav a:hover {background-color: #fbba6a; color: #00232f}
 nav a {color: #3cbaad;}
 span {color: #ffffff;}
 
