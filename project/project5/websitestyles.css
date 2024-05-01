@@ -1,5 +1,10 @@
 nav a {
     color: #ffffff;
+    text-decoration: none;
+}
+
+span {
+    color: #ffffff;
 }
 
 .pages {
@@ -25,6 +30,14 @@ label {
     padding: 10px;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 footer {
     display: flex;
     background-color: #0c1248;
@@ -35,6 +48,7 @@ footer {
     margin: 10px;
     padding: 10px;
     color: #ffffff;
+    text-decoration: none;
     }
 
 @media only screen and (max-width: 800px) {

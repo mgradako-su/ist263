@@ -5,20 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="websitestyles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        main {
+            margin: 30px;
+        }
+
+        .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+        background-color: #ccc;
+        }
+
+        .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        }
+    </style>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    </script>
 </head>
 <body>
     <nav>
         <img src="../media/logo.png" alt="All Aboard Ohio Logo">
         <div class="pages">
-            <a href="index.html">Home</a> <span>|</span>
-            <a href="calendar.html">About</a> <span>|</span>
+            <a href="index.html">Home</a> <span> |</span>
+            <a href="calendar.html">About</a> <span> |</span>
             <a href="membership.html">Join</a>
         </div>
     </nav>
     <main>
         <h1>About Us</h1>
+        <button class="accordion">Vision</button>
+        <div class="panel">
+        <p>All Aboard Ohio exists to advocate for the establishment, improvement and maintenance of a robust transportation system focusing on passenger rail. Our vision is to bring intercity daytime passenger rail services to Ohio, expanding accessibility and connecting our state.</p>
+        </div>
+
+        <button class="accordion">Strategy</button>
+        <div class="panel">
+        <p>AAO will bring together stakeholders and influential coalitions to take advantage of the once-in-a-lifetime opportunity that presents itself via the Corridor ID program funding.  AAO will act as a liaison in assisting the coalition achieve the vision by uniting leadership to navigate the Corridor ID program</p>
+        </div>
+
+        <button class="accordion">Mission Statement</button>
+        <div class="panel">
+        <p>
+            The Ohio Association of Railroad Passengers (OARP) supports the innovative design and development of a robust transportation system that provides diverse transit options to all Ohioans.  OARP believes that a robust transportation system is critically important to the residents of Ohio because transportation is an essential community infrastructure.<br>
+            OARP exists to advocate for the establishment, improvement, and maintenance of a transportation system that:
+        </p>
+        <ul>
+            <li>serves all Ohio residents, including low- and moderate-income residents with limited access to personal transportation, business travelers, and tourists,
+            <li>helps low- and moderate-income residents access employment opportunities</li>
+            <li>revitalizes and stabilizes underserved and/or distressed nonmetropolitan middle-income geographies,</li>
+            <li>connects Ohio's communities, residents, and businesses,</li>
+            <li>focus public awareness on the need to improve efficient intercity passenger rail and local public transit in Ohio,</li>
+            <li>support objective, nonpartisan research and provide the results of that research to civic, public sector, and private sector leaders,</li>
+            <li>educate the public about the use, benefits, and investments required to improve safe and efficient passenger ground transportation</li>
+        </ul>
+
+        <button class="accordion">Diversity, Equity, and Inclusion Statement</button>
+        <div class="panel">
+        <p>All Aboard Ohio recognizes access to safe and equitable transportation as a fundamental civil right. Transportation systems can unite or divide communities. Infrastructure decisions in the mid-twentieth century, known to be rooted in prejudice, continue to inform too many transportation planning and funding decisions today. AAO advocates for safe, affordable, and efficient transportation policies that address structural injustices of disparate access to economic opportunities, housing, and services. We commit to building a diverse coalition of Ohioans, working together for sustainable and equitable transportation that we can be proud of for generations to come.”</p>
+        </div>
         
-        <h2>Vision</h2>
+       <!-- <h2>Vision</h2>
         <p>All Aboard Ohio exists to advocate for the establishment, improvement and maintenance of a robust transportation system focusing on passenger rail. Our vision is to bring intercity daytime passenger rail services to Ohio, expanding accessibility and connecting our state.</p>
         
         <h2>Strategy</h2>
@@ -41,26 +119,28 @@
 
         <h2>Diversity, Equity, and Inclusion Statement</h2>
         <p><i>All Aboard Ohio recognizes access to safe and equitable transportation as a fundamental civil right. Transportation systems can unite or divide communities. Infrastructure decisions in the mid-twentieth century, known to be rooted in prejudice, continue to inform too many transportation planning and funding decisions today. AAO advocates for safe, affordable, and efficient transportation policies that address structural injustices of disparate access to economic opportunities, housing, and services. We commit to building a diverse coalition of Ohioans, working together for sustainable and equitable transportation that we can be proud of for generations to come.”</i></p>
-
-        <h1>Meet the Board of Directors</h1>
+    -->
+        <h2>Meet the Board of Directors</h2>
         <h3>Executive Officers</h3>
         <p>
-            Erin Rosiello, Chair<br>
+            <strong>Erin Rosiello, Chair</strong><br>
             <div class="email"><a href="mailto:erin@allaboardohio.org">erin@allaboardohio.org</a><br></div>
             Volunteer, Former business owner and entrepreneur, Regional Manager for Ohio's Bureau of Workers' Comp, Founding member of Rotary of Cincinnati EastSide Rotary, BA in business and Ohio Certified Public Manager from John Glenn's College of Public Affairs at OSU; Cincinnati<br>
-            
-            Mitch Radakovich, Vice-Chair<br>
+        </p>
+        <p>
+            <strong>Mitch Radakovich, Vice-Chair</strong><br>
             <div class="email"><a href="mailto:mitch@allaboardohio.org">mitch@allaboardohio.org</a><br></div>
             Data Scientist, Proctor & Gamble; Cincinnati<br>
-
-            Sujan Kakumanu, Secretary<br>
+        </p>
+        <p>
+            <strong>Sujan Kakumanu, Secretary</strong><br>
             <div class="email"><a href="mailto:sujan@allaboardohio.org">sujan@allaboardohio.org</a><br></div>
             Software Engineer, JP Morgan Chase; Columbus<br>
-            
-            Shelby Erickson, Treasurer<br>
+        </p>
+        <p>
+        <strong>Shelby Erickson, Treasurer</strong><br>
             <div class="email"><a href="mailto:shelby@allaboardohio.org">shelby@allaboardohio.org</a><br></div>
             Shared Services Controller, CAPA; Columbus
-
         </p>
         
         <h3>Directors</h3>
@@ -89,48 +169,15 @@
         </p>
         
         <h1>Upcoming Events</h1>
-        <!-- Would it be possible to embed a calendar-->
-        <!-- List view:-->
-        <h4>February 9</h4>
-        <p>
-            Toledo Whistle Stop Feb 09, 2024, 10:30 AM<br>
-            AAO Toledo Chapter Meeting Feb 09, 2024, 10:30 AM
-        </p>
-        
-        <h4>February 10</h4>
-        <p>
-            AAO Statewide Meeting Feb 10, 2024, 10:00 AM-11:00 AM<br>
-            Zoom call <!-- Link to meeting? --><br>
-            Join us this Saturday for our Statewide Zoom Meeting. Topics of discussion include: Whistle Stop Tour updates, Cincinnati Street Car Expansion, and what roles freight railroads, MPOs, Cities, Counties, the ORDC, the FRA, and Amtrak fill in the Corridor ID program, how they work together, and what we can do to move Ohio forward in this process!<br>
-            <!-- Button for registration -->
-        </p>
-
-        <h4>February 17</h4>
-        <p>
-            AAO Central Ohio Chapter Meeting Feb 17, 2024 10:00 AM-12:00 PM EST<br>
-            Columbus, 1685 W 1st Ave, Columbus, OH 43212, USA
-        </p>
-
-        <h4>February 22</h4>
-        <p>
-            Crestline Whistle Stop Feb 22, 2024, 4:30 PM<br>
-            The Hub at Village Square, 311 N Seltzer St, Crestline, OH 44827, USA
-        </p>
-
-        <h4>February 28</h4>
-        <p>
-            AAO Southwest Chapter Meeting Feb 28, 2024, 6:00 PM-7:30 PM<br>
-            Cincinnati, 2533 Kemper Ln, Cincinnati, OH 45206, USA
-        </p>
-
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23fbf3e3&mode=MONTH&showPrint=0&showTitle=0&src=Y19jNGYyZGY3ZjhiZWU1NGM1NmJjYzRlYTEwYWViNWRkMmEyNDFiNTJlOWZiODRmNWIyNmEwMjc4ZGIzNWM0NjhkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </main>
 
     <footer>
-        <div class="address"> <!-- make this a flex box: info on right, map on left -->
+        <div class="address">
             Address: 3136 Kingsdale Center #112<br>
             Columbus, OH 43221
         </div>
-        <div class="email"><a href="mailto:info@allaboardohio.org">Email: info@allaboardohio.org</a><br></div>
+        <div class="email"><a class="email" href="mailto:info@allaboardohio.org">Email: info@allaboardohio.org</a><br></div>
         <div class="phone">
             Phone: (614) 401-4589 <br>
         </div>
