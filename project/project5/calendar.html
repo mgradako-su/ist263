@@ -143,6 +143,18 @@
             nav {display: block;}
 
         }
+
+        .skip {
+            background-color: #0c1248;
+            padding: 10px;
+            text-decoration: none;
+            position: absolute; /* positions relative to top and bottom of viewport */
+            top: 10px;
+            left: -999px; /* push button off of screen */
+        }
+        .skip:focus { /* when button is tabbed to = focus */
+            left: 10px;
+        }
     </style>
     <script>
         function showNav () {
@@ -164,6 +176,7 @@
         <a href="membership.html">Join</a>
     </div>
     <nav>
+        <a href="#skip" class="skip" tabindex="1">Skip to Content</a><br>
         <img src="../media/logo.png" alt="All Aboard Ohio Logo">
         <div id="navlinks" class="pages">
             <a href="index.html">Home</a> <span> |</span>
@@ -172,7 +185,7 @@
         </div>
     </nav>
     <main>
-        <div class="accordion-body">
+        <div class="accordion-body" id="skip">
         <h1>About Us</h1>
         <div class="accordion">
             <hr>
