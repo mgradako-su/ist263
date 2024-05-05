@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Become a Member</title>
     <link rel="stylesheet" href="websitestyles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,14 +16,127 @@
             background-color: #8eb1d3;
             margin: 10px;
             padding: 10px;
+            border-radius: 25px;
         }
-        .onboard, .clubcar {padding: 10px;}
+        .onboard, .clubcar {
+            padding: 10px; 
+            margin: 10px;
+            border: solid #0c1248;
+            border-radius: 25px;
+        }
+
+        #hamicon {
+            width: 40px;
+            display: none;
+        }
+        #exit {
+            display: none;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 2em;
+            margin: 10px;
+        }
+
+        #small-links {
+            display: none;
+            padding: 30px;
+            background-color: #0c1248;
+        }
+
+        #small-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .box {
+            background-color: #0c1248;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #hamicon, #exit, #small-links {display: block;}
+            a {display: block;}
+            .box {
+                display: flex;
+                justify-content: space-between;
+            }
+            nav {display: none;}
+            .membership {
+                display: block;
+                flex-direction: column;
+            }
+
+        }
+
+        @media only screen and (min-width: 801px) {
+            nav {
+                display: block;
+                flex-direction: row;
+            }
+        }
+
+        .button {
+            background-color: #0c1248;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #modal {
+            background-color: #eeeeee;
+            color: #0c1248;
+            border: 2px solid #0c1248;
+            padding: 10px;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            display: none;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        #close {
+            text-align: right;
+            margin: 0px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function showNav () {
+            document.getElementById("small-links").style.display = "block"
+        }
+        function hideNav () {
+            document.getElementById("small-links").style.display = "none"
+        }
+
+        function openModal () {
+            document.getElementById("modal").style.display = "block";
+        }
+        function closeModal () {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
 </head>
 <body>
+    <div class="box">
+        <img id="hamicon" onclick="showNav();" src="/media/hamicon.png" alt="hamburger menu icon">
+        <p id="exit" onclick="hideNav();">X</p>
+    </div>
+    <div id="small-links">
+        <a href="index.html">Home</a><hr>
+        <a href="calendar.html">About</a><hr>
+        <a href="membership.html">Join</a>
+    </div>
     <nav>
         <img src="../media/logo.png" alt="All Aboard Ohio Logo">
-        <div class="pages">
+        <div id="navlinks" class="pages">
             <a href="index.html">Home</a> <span> |</span>
             <a href="calendar.html">About</a> <span> |</span>
             <a href="membership.html">Join</a>
@@ -37,20 +150,42 @@
             <div class="ontrack">
                 <h4>On-Track: Student, Military, and Veteran Pricing</h4>
                 <p>$25 annually</p>
+                <p><a onclick="openModal();" class="button">Register</a></p>
             </div>
             <div class="onboard">
                 <h4>On-Board</h4>
                 <p>$35 annually</p>
+                <p><a onclick="openModal();" class="button">Register</a></p>
             </div>
 
             <div class="firstclass">
                 <h4>First Class</h4>
                 <p>$50 annually</p>
+                <p><a onclick="openModal();" class="button">Register</a></p>
             </div>
             <div class="clubcar">
                 <h4>Club Car</h4>
                 <p>$100 annually</p>
+                <p><a onclick="openModal();" class="button">Register</a></p>
             </div>
+        </div>
+
+        <div id="modal">
+            <p id="close" onclick="closeModal();">X</p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="subscription-type">Subscription Plan</label><br>
+            <input type="radio" id="ontrack" name="ontrack" value="ontrack">
+            <label for="ontrack">On Track</label><br>
+            <input type="radio" id="onboard" name="onboard" value="onboard">
+            <label for="onboard">On Board</label><br>
+            <input type="radio" id="firstclass" name="firstclass" value="firstclass">
+            <label for="firstclass">First Class</label><br>
+            <input type="radio" id="clubcar" name="clubcar" value="clubcar">
+            <label for="clubcar">Club Car</label><br>
+            <input type="submit" value="Subscribe"><br>
         </div>
         <!-- Form below -->
         <p>If you would prefer to join or renew by mail, please print our membership form and mail completed form with payment to: 3136 Kingsdale Center, #112 Columbus, OH 43221</p>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="websitestyles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,16 +16,101 @@
         }
         .story1, .story2, .story3 {
             flex: 1;
-            margin: 10px;
+            margin: 20px;
             padding: 30px;
         }
+
         img {max-width: 100%;}
+
+        main {
+            margin: 20px;
+        }
+
+        .contacttitle {
+            text-align: center;
+        }
+
+        form {
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #hamicon {
+            width: 40px;
+            display: none;
+        }
+        #exit {
+            display: none;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 2em;
+            margin: 10px;
+        }
+
+        #small-links {
+            display: none;
+            padding: 30px;
+            background-color: #0c1248;
+        }
+
+        #small-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .box {
+            background-color: #0c1248;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #hamicon, #exit, #small-links {display: block;}
+            a {display: block;}
+            .box {
+                display: flex;
+                justify-content: space-between;
+            }
+            nav {display: none;}
+            .railnews {
+                flex-direction: column;
+            }
+
+        }
+
+        @media only screen and (min-width: 801px) {
+            nav {display: block;}
+            .railnews {
+                flex-direction: row;
+
+            }
+        }
     </style>
+    <script>
+        function showNav () {
+            document.getElementById("small-links").style.display = "block"
+        }
+        function hideNav () {
+            document.getElementById("small-links").style.display = "none"
+        }
+    </script>
 </head>
 <body>
+    <div class="box">
+        <img id="hamicon" onclick="showNav();" src="/media/hamicon.png" alt="hamburger menu icon">
+        <p id="exit" onclick="hideNav();">X</p>
+    </div>
+    <div id="small-links">
+        <a href="index.html">Home</a><hr>
+        <a href="calendar.html">About</a><hr>
+        <a href="membership.html">Join</a>
+    </div>
     <nav>
         <img src="../media/logo.png" alt="All Aboard Ohio Logo">
-        <div class="pages">
+        <div id="navlinks" class="pages">
             <a href="index.html">Home</a> <span> |</span>
             <a href="calendar.html">About</a> <span> |</span>
             <a href="membership.html">Join</a>
@@ -76,7 +161,7 @@
         <input type="text" id="subjectline" name="subjectline"><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="3" cols="60"></textarea><br>
+        <textarea id="message" name="message" rows="3" cols=auto></textarea><br>
 
         <input type="submit" value="Submit">
     </form>
